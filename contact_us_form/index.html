@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  
+  <title>Frontend Mentor | Contact form</title>
+</head>
+<body>
+  <main class="main">
+    <h1 class="visually-hidden">Contact Form</h1>
+
+    <form class="contact-form js-contact-form flow" novalidate>
+      <h2 class="form-heading">Contact Us</h2>
+
+      <div class="name-wrapper">
+        <div class="form-control-wrapper first-name-wrapper flow">
+          <label for="fName" class="required">First Name <span class="star">*</span></label>
+          <input type="text" name="firstName" id="fName" class="form-control" aria-describedby="firstNameError" autocomplete="given-name" data-error="false">
+          <p class="error js-error" id="firstNameError" aria-live="polite">This field is required</p>
+        </div><!-- end first-name-wrapper --> 
+
+        <div class="form-control-wrapper last-name-wrapper flow">
+          <label for="lName" class="required">Last Name <span class="star">*</span></label>
+          <input type="text" name="lastName" id="lName" class="form-control" aria-describedby="lastNameError" autocomplete="family-name" data-error="false">
+          <p class="error js-error" id="lastNameError" aria-live="polite">This field is required</p>
+        </div><!-- end last-name-wrapper -->
+      </div><!-- end name-wrapper -->
+
+      <div class="form-control-wrapper email-wrapper flow">
+        <label for="emailInput" class="required">Email Address <span class="star">*</span></label>
+        <input type="email" name="email" id="emailInput" class="form-control" aria-describedby="emailError emailValidationError" data-error="false">
+        <p class="error js-error" id="emailError" aria-live="polite">This field is required</p>
+        <p class="error js-error" id="emailValidationError" aria-live="polite">Please enter a valid email address</p>
+      </div><!-- end email-wrapper -->
+
+      <div class="query-wrapper flow">
+        <label class="required">Query Type <span class="star">*</span></label>
+
+        <div class="query-wrapper-inner">
+          <div class="form-control-wrapper enquiry-wrapper">
+            <input type="radio" name="queryType" id="generalEnquiry" value="1" class="form-control" aria-describedby="queryError" checked>
+            <label for="generalEnquiry">General Enquiry</label>
+          </div><!-- end enquiry-wrapper -->
+
+          <div class="form-control-wrapper support-wrapper">
+            <input type="radio" name="queryType" id="supportRequest" value="2" class="form-control" aria-describedby="queryError">
+            <label for="supportRequest">Support Request</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-control-wrapper message-wrapper flow">
+        <label for="messageField" class="required">Message <span class="star">*</span></label>
+        <textarea name="message" id="messageField" class="form-control" aria-describedby="messageError" data-error="false"></textarea>
+        <p class="error js-error" id="messageError" aria-live="polite">This field is required</p>
+      </div>
+
+      <div class="form-control-wrapper checkbox-wrapper flow">
+        <div class="checkbox-wrapper-inner">
+          <input type="checkbox" name="consent" id="consentCheckbox" class="form-control" aria-describedby="checkboxError">
+          <label for="consentCheckbox" class="consent-text" class="required">I consent to being contacted by the team <span class="star">*</span></label>
+        </div>
+        <p class="error js-error" id="checkboxError" aria-live="polite">To submit this form, please consent to being contacted</p>
+      </div>
+
+      <div class="btn-wrapper">
+        <button class="submit-btn form-control">Submit</button>
+      </div>
+
+      <div class="success-message flow">
+        <h2 class="success-message__heading">Message Sent!</h2>
+        <p class="success-message__text">Thanks for completing the form. We'll be in touch soon!</p></p>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
