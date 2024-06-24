@@ -1,0 +1,39 @@
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Generate - mostly completely useless - advice with a simple button click.">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Advice generator app</title>
+
+</head>
+
+<body>
+
+  <main>
+
+    <article class="advice-card">
+      <h1 class="advice-id" id="advice-id"></h1>
+      <p class="advice-body" id="advice-body">"Some hopefully pretty lengthy placeholder for future advice. Pls work,
+        please lol"</p>
+      <picture class="divider" aria-hidden="true">
+        <source srcset="images/pattern-divider-desktop.svg" media="(min-width: 800px)">
+        <img src="images/pattern-divider-mobile.svg" alt="" />
+      </picture>
+      <button class="advice-btn" id="advice-btn" aria-label="Generate a random advice.">
+        <img src="images/icon-dice.svg" alt="" aria-hidden="true">
+      </button>
+    </article>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
